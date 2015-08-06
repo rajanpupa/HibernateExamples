@@ -1,0 +1,9 @@
+package com.hib2.test;
+
+public class Vehicle {
+	
+	private int vehicleId;
+	private String vehicleName;
+	
+	
+}

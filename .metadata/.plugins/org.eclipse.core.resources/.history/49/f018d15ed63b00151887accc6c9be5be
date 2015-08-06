@@ -1,0 +1,5 @@
+package com.hib.test;
+
+public class TwoWheeler extends Vehicle {
+
+}

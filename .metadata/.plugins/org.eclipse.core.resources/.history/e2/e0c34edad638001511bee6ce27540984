@@ -1,0 +1,12 @@
+package org.hibernate.main;
+
+import org.javabrains.kaushik.dto.UserDetails;
+
+public class HibernateTest {
+
+	public static void main(String[] args) {
+		UserDetails user = new UserDetails();
+		user.setUserId(1);
+		user.setUserName("first user");
+	}
+}

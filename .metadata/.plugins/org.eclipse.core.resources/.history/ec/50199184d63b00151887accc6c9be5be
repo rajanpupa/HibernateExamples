@@ -1,0 +1,17 @@
+package com.hib.test;
+
+public class TwoWheeler extends Vehicle {
+	
+	String SteeringHandle;
+
+	public String getSteeringHandle() {
+		return SteeringHandle;
+	}
+
+	public void setSteeringHandle(String steeringHandle) {
+		SteeringHandle = steeringHandle;
+	}
+
+	
+	
+}

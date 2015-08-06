@@ -1,0 +1,8 @@
+package org.javabrains.kaushik.dto;
+
+public class Address {
+	String street;
+	String city;
+	String state;
+	String zip;
+}

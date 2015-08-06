@@ -1,0 +1,5 @@
+We will look at the object relationships.
+- one to one
+- one to many
+- many to many
+https://docs.jboss.org/hibernate/orm/3.6/reference/en-US/html/collections.html
