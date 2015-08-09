@@ -5,6 +5,12 @@
 
 **Table per class strategy**
 
-## Reference:
+** more normalized JOIned strategy ** 
 
-https://youtu.be/qIdM4KQOtH8?list=PL_5aB2ncz1K8swf-bMC6cQpfzF12VxpHt
+## Reference:
+(Table_Per_class Strategy)[https://youtu.be/qIdM4KQOtH8?list=PL_5aB2ncz1K8swf-bMC6cQpfzF12VxpHt]
+(Joined stragety)[https://youtu.be/o1b3HFIlDS0?list=PL_5aB2ncz1K8swf-bMC6cQpfzF12VxpHt]
+
+
+*** Next ***
+CRUD OPERATIONS
