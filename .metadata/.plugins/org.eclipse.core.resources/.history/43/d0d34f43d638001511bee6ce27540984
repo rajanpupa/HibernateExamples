@@ -1,5 +1,0 @@
-package org.hibernate.main;
-
-public class HibernateTest {
-
-}
