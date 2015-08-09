@@ -1,3 +1,9 @@
-.class
+*.class
+.*
+.*/
+*/.*
+*~*
 build/*
-target/*
+target/*.*
+
+.metadata
