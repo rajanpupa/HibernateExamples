@@ -5,6 +5,10 @@
 	In this one we will learn about:
 	
     * select and pagination in HQL
+    
+    * How to select certain fields only from database
+    
+    * How to select certain fields only in map 
 
 
 ## Reference:

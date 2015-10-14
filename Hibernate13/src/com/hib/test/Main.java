@@ -13,14 +13,40 @@ public class Main {
 	public static void main(String[] args) {
 		//createExample();
 		
+		// simple select, whole object whole data
 //		hqlExample();
+		
+		// select certain fields only, List of Strings
 //		hqlExample2();
 		
-		// not working properly
-		hqlExample3();
+		// select more fields in map data structure
+		//selectMapHqlExample3();
+		
+		// aggregate function
+		hqlGetMaxExample();
 	}
 	
-	public static void hqlExample(){
+	public static void hqlGetMaxExample(){
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		// returns list of single UserId
+		Query query = session.createQuery("select max(userId) from UserDetails");
+		//Query query = session.createQuery("select userName from UserDetails");// this will return list of String not userDetails
+		
+		List<Integer> users =(List<Integer>) query.list();
+		
+		session.getTransaction().commit();
+		session.close();
+
+		for(Integer u : users){
+			System.out.println(u + "----");
+			
+		}
+	}
+	
+	public static void simpleHqlExample(){
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -41,7 +67,7 @@ public class Main {
 		}
 	}
 	
-	public static void hqlExample2 (){
+	public static void selectedFieldsHqlExample2 (){
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -63,7 +89,7 @@ public class Main {
 		}
 	}
 	
-	public static void hqlExample3 (){
+	public static void selectMapHqlExample3 (){
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -79,16 +105,14 @@ public class Main {
 		session.getTransaction().commit();
 		session.close();
 
-		for(Map<String, String> u : users){
-			for(String i : u.keySet()){
-				System.out.println(i + "=> " 
-						+ u.get(Integer.parseInt(i) ));
+		for(Map<Integer, String> u : users){
+			for(Integer i : u.keySet()){
+				System.out.println(i + "=> " + u.get(i));
 			}
-			
 		}
 	}
 	
-	// helper method
+	// helper method, to populate initial data
 	public static void createExample(){
 
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();

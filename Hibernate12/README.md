@@ -4,6 +4,9 @@
 	
  * sql for objects and relationships
 
+## Pagination
+	query.setMaxResult(int);
+	query.setFirstResult(int); // start offset
 
 ## Reference:
 
